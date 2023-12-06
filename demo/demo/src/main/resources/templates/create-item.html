@@ -1,0 +1,47 @@
+<!-- create-item.html -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Item Page</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create Item</h2>
+
+        <!-- Item creation form -->
+        <form action="/create-item" method="post">
+            <label for="item_name">Item Name:</label>
+            <input type="text" id="item_name" name="item_name" required>
+
+            <label for="item_price">Item Price:</label>
+            <input type="text" id="item_price" name="item_price" required>
+
+            <label for="item_id">Item Image(image address only, after shortening):</label>
+            <input type="text" id="item_id" name="item_id" required>
+
+            <label for="item_description">Item Description:</label>
+            <textarea id="item_description" name="item_description" rows="4" required></textarea>
+
+            <label for="veg_non_veg">Veg/Non Veg:</label>
+            <select id="veg_non_veg" name="veg_non_veg" required>
+                <option value="veg">Veg</option>
+                <option value="nonVeg">Non Veg</option>
+            </select>
+
+            <label for="item_category">Item Category:</label>
+            <select id="item_category" name="item_category" required>
+                <option value="burger">Burger</option>
+                <option value="pizza">Pizza</option>
+                <option value="sandwich">Sandwich</option>
+                <option value="salad">Salad</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Create Item</button>
+        </form>
+    </div>
+</body>
+</html>

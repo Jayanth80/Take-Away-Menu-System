@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Items</title>
+
+    <style>
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .menu-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item-image {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .menu-item-details {
+            padding: 10px;
+        }
+
+        h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .description {
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Menu Items</h2>
+
+<div th:each="menu : ${menus}" class="menu-item">
+
+    <div class="image-row">
+        <!-- Placeholder images, replace with your actual image URLs or implement image upload logic -->
+        <img th:src="${menu.itemId}"
+             alt="Image 1" class="menu-item-image">
+        <!-- Add more image tags as needed -->
+    </div>
+
+    <div class="menu-item-details">
+        <h3 th:text="${menu.itemName}"></h3>
+        <p th:text="${menu.itemDescription}" class="description"></p>
+        <p>
+            <span th:text="${menu.itemPrice}"></span>
+            <span th:text="${menu.vegNonVeg}"></span>
+        </p>
+    </div>
+</div>
+
+</body>
+
+</html>

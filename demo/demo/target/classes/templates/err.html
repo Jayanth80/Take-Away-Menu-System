@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+</head>
+<body>
+<div>
+    <h2>Sucessfuly updated to db</h2>
+    <p>for home : localhost:8080</p>
+    <p>for output: localhost:8080/<span th:text="${status}"></span></p>
+    <p>for another input: localhost:8080/create-item<span th:text="${errorMessage}"></span></p>
+</div>
+</body>
+</html>

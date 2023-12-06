@@ -1,0 +1,21 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeaway Menu System</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="menu-container">
+    <h1>Takeaway Menu System</h1>
+    <!-- Use Thymeleaf syntax for linking to the create-item and view-menu pages -->
+    <a th:href="@{/create-item}" class="create-item-btn">Create Item</a>
+    <a th:href="@{/menuList}" class="create-item-btn">View Menu</a>
+    <a th:href="@{/display-menu}" class="create-item-btn">Display Menu</a>
+
+</div>
+</body>
+</html>
